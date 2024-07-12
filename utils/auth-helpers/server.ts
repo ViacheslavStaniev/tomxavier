@@ -160,6 +160,8 @@ export async function signInWithPassword(formData: FormData) {
     );
   }
 
+  // cookieStore.set('preferredSignInView', 'password_signin', { path: '/' });
+  // redirectPath = getStatusRedirect('/', 'Success!', 'You are now signed in.');
   return redirectPath;
 }
 
@@ -186,6 +188,8 @@ export async function signUp(formData: FormData) {
       emailRedirectTo: callbackURL
     }
   });
+
+  console.log(supabase);
 
   if (error) {
     redirectPath = getErrorRedirect(

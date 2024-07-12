@@ -5,6 +5,7 @@ import { Toaster } from '@/components/ui/Toasts/toaster';
 import { PropsWithChildren, Suspense } from 'react';
 import { getURL } from '@/utils/helpers';
 import 'styles/main.css';
+import SideBar from '@/components/ui/SideBar';
 
 const title = 'Next.js Subscription Starter';
 const description = 'Brought to you by Vercel, Stripe, and Supabase.';
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className="bg-black">
+      <body className="bg-white">
         <Navbar />
         <main
           id="skip"
@@ -30,7 +31,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
         >
           {children}
         </main>
-        <Footer />
+        {/* <Footer /> */}
         <Suspense>
           <Toaster />
         </Suspense>

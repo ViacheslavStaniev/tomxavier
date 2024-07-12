@@ -16,6 +16,7 @@ import OauthSignIn from '@/components/ui/AuthForms/OauthSignIn';
 import ForgotPassword from '@/components/ui/AuthForms/ForgotPassword';
 import UpdatePassword from '@/components/ui/AuthForms/UpdatePassword';
 import SignUp from '@/components/ui/AuthForms/Signup';
+import Image from "next/image";
 
 export default async function SignIn({
   params,
@@ -55,10 +56,19 @@ export default async function SignIn({
   }
 
   return (
-    <div className="flex justify-center height-screen-helper">
-      <div className="flex flex-col justify-between max-w-lg p-3 m-auto w-80 ">
-        <div className="flex justify-center pb-12 ">
+    <div className="flex justify-center height-screen-helper bg-[#370502]">
+      <div className="flex flex-col justify-between max-w-lg p-[30px] m-auto  rounded-[40px] bg-[#310c09]">
+        {/* <div className="flex justify-center pb-12 ">
           <Logo width="64px" height="64px" />
+        </div> */}
+        <div className="flex justify-center">
+          <Image
+            src={"/logo2.png"}
+            alt="Image Description" // Add an alt text for accessibility
+            width={50}
+            height={50}
+            style={{ borderRadius: '20%' }}
+          />
         </div>
         <Card
           title={
@@ -68,7 +78,7 @@ export default async function SignIn({
                 ? 'Update Password'
                 : viewProp === 'signup'
                   ? 'Sign Up'
-                  : 'Sign In'
+                  : 'Log in to Texto en auto'
           }
         >
           {viewProp === 'password_signin' && (
@@ -107,6 +117,6 @@ export default async function SignIn({
             )}
         </Card>
       </div>
-    </div>
+    </div >
   );
 }

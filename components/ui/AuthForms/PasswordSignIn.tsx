@@ -34,11 +34,11 @@ export default function PasswordSignIn({
         onSubmit={(e) => handleSubmit(e)}
       >
         <div className="grid gap-2">
-          <div className="grid gap-1">
-            <label htmlFor="email">Email</label>
+          <div className="grid gap-10">
+            <label htmlFor="email">Please enter your email address</label>
             <input
               id="email"
-              placeholder="name@example.com"
+              placeholder="Enter your email"
               type="email"
               name="email"
               autoCapitalize="none"
@@ -46,7 +46,7 @@ export default function PasswordSignIn({
               autoCorrect="off"
               className="w-full p-3 rounded-md bg-zinc-800"
             />
-            <label htmlFor="password">Password</label>
+            {/* <label htmlFor="password">Password</label> */}
             <input
               id="password"
               placeholder="Password"
@@ -59,25 +59,25 @@ export default function PasswordSignIn({
           <Button
             variant="slim"
             type="submit"
-            className="mt-1"
+            className="mt-4"
             loading={isSubmitting}
           >
-            Sign in
+            Continue
           </Button>
         </div>
       </form>
-      <p>
+      {/* <p>
         <Link href="/signin/forgot_password" className="font-light text-sm">
           Forgot your password?
         </Link>
-      </p>
-      {allowEmail && (
+      </p> */}
+      {/* {allowEmail && (
         <p>
           <Link href="/signin/email_signin" className="font-light text-sm">
             Sign in via magic link
           </Link>
         </p>
-      )}
+      )} */}
       <p>
         <Link href="/signin/signup" className="font-light text-sm">
           Don't have an account? Sign up

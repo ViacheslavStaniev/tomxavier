@@ -24,6 +24,8 @@ export async function handleRequest(
     // Otherwise, redirect server-side
     return await redirectToPath(redirectUrl);
   }
+
+  // return router?.push('/home');
 }
 
 export async function signInWithOAuth(e: React.FormEvent<HTMLFormElement>) {

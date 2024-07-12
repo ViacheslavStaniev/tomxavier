@@ -25,7 +25,7 @@ export default function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
   };
 
   return (
-    <div className="my-8">
+    <div className="my-8 text-left">
       <form
         noValidate={true}
         className="mb-4"
@@ -70,13 +70,13 @@ export default function SignUp({ allowEmail, redirectMethod }: SignUpProps) {
           Sign in with email and password
         </Link>
       </p>
-      {allowEmail && (
+      {/* {allowEmail && (
         <p>
           <Link href="/signin/email_signin" className="font-light text-sm">
             Sign in via magic link
           </Link>
         </p>
-      )}
+      )} */}
     </div>
   );
 }
